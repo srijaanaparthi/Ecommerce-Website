@@ -10,13 +10,15 @@ function Login() {
   return (
     <div className="App">
       <h1>Welcome to our E-commerce Website!</h1>
+      <form>
       <label htmlFor='email'>email</label>
-      <input type="email" placeholder="Enter your email" />
+      <input  type="email" placeholder="Enter your email"  />
       <section>
         <label htmlFor='password'>password</label>
-      <input type="password" placeholder="Enter your password" />
+      <input type="password" placeholder="Enter your password" required />
       </section>
       <button onClick={handleLogin}>Login</button>
+      </form>
 
     </div>
   );
