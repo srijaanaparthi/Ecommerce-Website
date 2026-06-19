@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import QuantityDropdown from "./Quantity";
+
 import CheckOut from "./CheckOut";
 function AddToCart() {
   const { id } = useParams();
@@ -31,17 +31,37 @@ function AddToCart() {
 
       <h3>${Cartproductt.price}</h3>
 
-      <p>
-        <strong>Category:</strong> {Cartproductt.category}
-      </p>
+    
+      <QuantityDropdown Cartproductt={Cartproductt}/>
+     
+      <button>Buy Now</button>
 
-      <p>{Cartproductt.description}</p>
-      <QuantityDropdown/>
-      <button onClick={CheckOut}>Buy Now</button>
     </div>
   );
 }
+function QuantityDropdown({Cartproductt}){
+    const [quantity,setQuantity] = useState(1);
+
+    const maxQuantity=30;
+    const option=Array.from({length:maxQuantity},(_,i)=>i+1);
+    return(
+        <div>
+            <label htmlFor="quantity">
+                Quantity
+            </label>
+            <select id="quantity" style={{width:50}}
+            value={quantity}
+            onChange={(e) => setQuantity(Number(e.target.value))}>
+                {option.map((num) => (
+                    <option key={num} value={num}>{num}</option>
+                ))}
+                
+            </select>
+           <h3>
+                Total Price: ${(Cartproductt.price * quantity).toFixed(2)}
+          </h3>
 
 
+</div>)}
 export default AddToCart;
     
