@@ -2,6 +2,7 @@ import {useState,useEffect} from 'react';
 import { Route,Routes, useNavigate } from 'react-router-dom';
 import  './ProductCard.css'
 import ViewDetails from './ViewDetails.jsx'
+import AddToCart from './AddToCart.jsx';
 
 function ProductCard(){
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ function ProductCard(){
                     <h2 className='name'>{product.name}</h2>
                     <p>${product.price}</p>
                     <p>{product.category}</p>
-                    <button className='btn'>Add to Cart</button>
+                    <button className='btn' onClick={() => navigate(`/productt/${product.id}`)}>Add to Cart</button>
                     <button className='btn'  onClick={() => navigate(`/product/${product.id}`)}>View Details</button>
                  
                 </div>
@@ -35,6 +36,7 @@ function App()
         <Routes>
             <Route path="/product" element={<ProductCard/>}/>
             <Route path="/product/:id" element={<ViewDetails/>}/>
+            <Route path="/productt/:id" element={<AddToCart/>}/>
         </Routes>
            
     

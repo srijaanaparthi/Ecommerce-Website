@@ -2,7 +2,9 @@
 import './App.css';
 import ProductCard from './pages/ProductCard';
 import ViewDetails from './pages/ViewDetails';
+import AddToCart from './pages/AddToCart';
 import { Routes,Route,useNavigate } from 'react-router-dom';
+import CheckOut from './pages/CheckOut';
 function Login() {
   const navigate = useNavigate();
   const handleLogin = () => {
@@ -30,6 +32,8 @@ function App() {
       <Route path="/" element={<Login />} />
       <Route path="/products" element={<ProductCard />} />
       <Route path='/product/:id' element={<ViewDetails/>}/>
+       <Route path='/productt/:id' element={<AddToCart/>}/>
+       <Route path='/productt/:id' element={<CheckOut/>}/>
     </Routes>
   );
 }
