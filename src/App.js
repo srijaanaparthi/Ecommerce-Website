@@ -1,6 +1,7 @@
 
 import './App.css';
 import ProductCard from './pages/ProductCard';
+import ViewDetails from './pages/ViewDetails';
 import { Routes,Route,useNavigate } from 'react-router-dom';
 function Login() {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/products" element={<ProductCard />} />
+      <Route path='/product/:id' element={<ViewDetails/>}/>
     </Routes>
   );
 }
