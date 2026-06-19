@@ -1,14 +1,49 @@
+import {useState,useEffect} from 'react';
 function CheckOut(){
-    return(
-        <div>
-            <label htmlFor="name"> Full name</label>
-            <input value={"name"} type="text"/>
-            {/* <label htmlFor="email">email</label>
-            <input value={Email} type="email"/> */}
-            <label htmlFor="phone">Phone </label>
-            <input value={Number} type="tel"/>
 
-        </div>
-    )
+const [name,setName]=useState();
+const [email,setEmail]=useState("");
+// cons [address,setAddress]=useState("");
+const handleSubmit=(e) =>{
+    e.preventDefault();
+    alert(
+        'ordered successfully'
+    );
+    setEmail("");
+    setName("");
+    // setAddress("");
+
+}
+return(
+    <div>
+        <h1>Customer Details</h1>
+        <form onSubmit={handleSubmit}>
+            <label>Name</label>
+            <input
+            type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+            ></input>
+            <label>Email</label>
+            <input 
+            type="email"
+            placeholder="Enter yourr email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            ></input>
+            {/* <label>Address</label>
+            <input
+            type="text"
+            placeholder="Enter your address"
+            value={address}
+            ></input> */}
+        </form>
+    </div>
+)
+
+
+
 }
 export default CheckOut;

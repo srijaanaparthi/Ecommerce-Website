@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import CheckOut from "./CheckOut";
 function AddToCart() {
   const { id } = useParams();
-
+const navigate=useNavigate();
   const [Cartproductt, setCartProductt] = useState(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function AddToCart() {
     
       <QuantityDropdown Cartproductt={Cartproductt}/>
      
-      <button>Buy Now</button>
+      <button onClick={()=>navigate("/CheckOut")}>Buy Now</button>
 
     </div>
   );

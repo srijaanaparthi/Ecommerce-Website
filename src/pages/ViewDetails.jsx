@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams,Route,Routes, Navigate, useNavigate } from "react-router-dom";
 import AddToCart from "./AddToCart";
+import CheckOut from "./CheckOut";
 function ViewDetails() {
   const { id } = useParams();
 const navigate=useNavigate();
@@ -44,6 +45,7 @@ function App(){
     return(
         <Routes>
         <Route path="/productt/:id" element={<AddToCart/>}/>
+        <Route path="/CheckOut" element={<CheckOut/>}/>
         </Routes>
    )
 }
