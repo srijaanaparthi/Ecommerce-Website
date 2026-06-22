@@ -1,5 +1,6 @@
 
 import './App.css';
+// import './banner-shopingg.jpg';
 import ProductCard from './pages/ProductCard';
 import ViewDetails from './pages/ViewDetails';
 import AddToCart from './pages/AddToCart';
@@ -15,7 +16,8 @@ function Login() {
   };
   return (
     <div className="App">
-      <h1>Welcome to our E-commerce Website!</h1>
+      <div className='content'>
+      <h1 style={{textAlign:'center'}}>Welcome to our E-commerce Website!</h1>
       <form>
       <label htmlFor='email'>email</label>
          
@@ -24,16 +26,18 @@ function Login() {
         <label htmlFor='password'>password</label>
       <input type="password" placeholder="Enter your password" required />
       </section>
-      <button onClick={handleLogin}>Login</button>
+      <button style={{textAlign:'center',marginInlineStart:700}}
+      onClick={handleLogin}>Login</button>
       </form>
-
+       </div>
     </div>
   );
 }
 function App() {
+  
   const location = useLocation();
   return (
-   <>
+   <div className='background'>
     {location.pathname !== "/" && <Navbar />}
     <Routes>
       <Route path="/" element={<Login />} />
@@ -44,7 +48,7 @@ function App() {
        <Route path='/LandingPage'element={<LandingPage/>}/>
        <Route path='/cart' element={<AddToCart/>}/>
     </Routes>
-    </>
+    </div>
   );
 }
 export default App;

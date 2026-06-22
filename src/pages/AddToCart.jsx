@@ -18,13 +18,13 @@ const navigate=useNavigate();
   }
   return(
     
-        <div style={{ textAlign: "left", padding: "30px" }}>
+        <div style={{display: '-ms-flexbox', textAlign: "left", padding: "30px" ,color:'black',backgroundColor:'InfoBackground',marginBottom:30,}}>
       <img
         src={Cartproductt.image}
         alt={Cartproductt.title}
         width="250"
         height="250"
-        style={{ objectFit: "contain" }}
+        style={{ objectFit: "contain"}}
       />
 
       <h2 style={{fontSize:'250%'}}>{Cartproductt.title}</h2>

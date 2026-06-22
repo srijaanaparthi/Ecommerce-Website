@@ -18,7 +18,7 @@ const navigate=useNavigate();
   }
 
   return (
-    <div style={{ textAlign: "center", padding: "30px" }}>
+    <div style={{ textAlign: "center", padding: "30px" ,color:'black',boxSizing:'content-box',marginLeft:20,backgroundColor:'ButtonShadow' }}>
       <img
         src={product.image}
         alt={product.title}
