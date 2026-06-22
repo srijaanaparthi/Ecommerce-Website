@@ -1,0 +1,28 @@
+.intro-txt{
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    color: black;
+   background-color: rgb(209, 203, 195);
+width:auto;
+height: 20%;
+}
+.intro-txt h1{
+    margin: 1%;
+    padding: auto;
+    text-decoration:underline;
+    font-size: 500%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.intro-txt p{
+    font-size: 500%;
+    margin: 10%;
+    text-align: center;
+    justify-content:center;
+    color:rgb(8, 60, 60);
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    font-size: 50px;
+}

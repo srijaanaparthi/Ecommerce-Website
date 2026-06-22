@@ -5,10 +5,11 @@ import ViewDetails from './pages/ViewDetails';
 import AddToCart from './pages/AddToCart';
 import { Routes,Route,useNavigate } from 'react-router-dom';
 import CheckOut from './pages/CheckOut';
+import LandingPage from './pages/LandingPage'
 function Login() {
   const navigate = useNavigate();
   const handleLogin = () => {
-    navigate('/products');
+    navigate('/landingPage');
   };
   return (
     <div className="App">
@@ -34,6 +35,8 @@ function App() {
       <Route path='/product/:id' element={<ViewDetails/>}/>
        <Route path='/productt/:id' element={<AddToCart/>}/>
        <Route path='/CheckOut'element={<CheckOut/>}/>
+       <Route path='/LandingPage'element={<LandingPage/>}/>
+       <Route path='/cart' element={<AddToCart/>}/>
     </Routes>
   );
 }

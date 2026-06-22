@@ -1,21 +1,30 @@
 .App {
   text-align: center;
+  background-color: rgb(214, 210, 207);
+  background-repeat: space;
+  height: 100vh;
+}
+.App h2{
+  text-align: center;
+  font-size: 100%;
+}
+.App label{
+  font-size: 250%;
 }
 
-input {
+.App input {
   padding: 10px;
-  margin: 10px;
-  border: 1px solid #ccc;
+  margin: 100px;
+  border: 1px solid #fafafa;
   border-radius: 4px;
-  width: 200px;
+  width: 1200px;
 }
-button {
+.App button {
   padding: 10px 20px;
   margin: 10px;
-  background-color: #28a745;
+  background-color: #05ae59;
+  border-color:#05ae59 ;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  
 }
 

@@ -1,0 +1,21 @@
+.custdetails{
+    align-items: center;
+    background-color: burlywood;
+    background-size: cover;
+    display: flex;
+    height: 500px;
+    margin-top: auto;
+    justify-content: center;
+}
+.ipt{
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  size: 5cm;
+
+}
+.heading{
+align-items: center;
+text-align:center;
+color: #130c0c;
+}

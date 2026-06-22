@@ -26,18 +26,19 @@ const navigate=useNavigate();
         height="250"
         style={{ objectFit: "contain" }}
       />
+<section className="product-details">
+      <h2 style={{fontSize:'500%'}}>{product.title}</h2>
 
-      <h2>{product.title}</h2>
+      <h3 style={{fontSize:'250%'}}>${product.price}</h3>
 
-      <h3>${product.price}</h3>
-
-      <p>
+      <p style={{fontSize:'250%'}}>
         <strong>Category:</strong> {product.category}
       </p>
 
-      <p>{product.description}</p>
+      <p style={{fontSize:'200%'}}>{product.description}</p>
       
-      <button onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
+      <button  style={{fontSize:'250%',backgroundColor:'lightgreen'}}onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
+      </section>
     </div>
   );
 }

@@ -13,7 +13,11 @@ function ProductCard(){
         .then(data=>setProducts(data))
     },[])   
     return(
+        <><section>
+            <h2 style={{textAlign:'center',fontFamily:'Courier New',fontSize:'500%'}}>Our Products</h2>
+            </section>
         <div className="product-card">
+            
             {Products.map(product=>(
                 <div key={product.id} className="product">
                     
@@ -27,6 +31,7 @@ function ProductCard(){
                 </div>
             ))}
         </div>
+        </>
     )
 }
 function App()
