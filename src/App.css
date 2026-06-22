@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: rgb(214, 210, 207);
+  background-color: rgb(249, 247, 245);
   background-repeat: space;
   height: 100vh;
 }
@@ -9,12 +9,12 @@
   font-size: 100%;
 }
 .App label{
-  font-size: 250%;
+  font-size: 150%;
 }
 
 .App input {
   padding: 10px;
-  margin: 100px;
+  margin: 20px;
   border: 1px solid #fafafa;
   border-radius: 4px;
   width: 1200px;

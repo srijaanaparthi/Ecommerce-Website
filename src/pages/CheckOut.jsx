@@ -21,8 +21,8 @@ return(
     <div className='custdetails'>
        
         <form onSubmit={handleSubmit} style={{alignContent:'center'}}>
-            <label>Name</label>
-            <input className='ipt'
+            <label style={{fontSize:30,marginInlineEnd:50}}>Name</label>
+            <input style={{fontSize:'2500',width:500,height:20}}
             type="text"
           placeholder="Enter your name"
           value={name}
@@ -30,22 +30,27 @@ return(
           required
             ></input>
             <br></br>
-            <label>Email</label>
-            <input className='ipt'
+            <label style={{fontSize:30,marginInlineEnd:50}}>Email</label>
+            <input style={{width:500,height:20}}
             type="email"
             placeholder="Enter yourr email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          required
+
             ></input>
             <br></br>
-          <label>Address</label>
-            <input className='ipt'
+          <label style={{fontSize:30,marginInlineEnd:20}}>Address</label>
+            <input style={{width:500,marginInlineStart:0,height:20}}
             type="text"
             placeholder="Enter your address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+          required
+
             ></input> <br></br>
-            <button onSubmit={handleSubmit}>Submit</button>
+            <button  style={{textAlign:'center',backgroundColor:'orange',width:100,marginInlineStart:320,padding:5,marginTop:100}}
+            onSubmit={handleSubmit}>Submit</button>
         </form>
     </div>
     </>

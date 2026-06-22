@@ -3,11 +3,13 @@ import './App.css';
 import ProductCard from './pages/ProductCard';
 import ViewDetails from './pages/ViewDetails';
 import AddToCart from './pages/AddToCart';
-import { Routes,Route,useNavigate } from 'react-router-dom';
+import { Routes,Route,useNavigate,useLocation } from 'react-router-dom';
 import CheckOut from './pages/CheckOut';
 import LandingPage from './pages/LandingPage'
+import Navbar from './Components/Navbar';
 function Login() {
   const navigate = useNavigate();
+  
   const handleLogin = () => {
     navigate('/landingPage');
   };
@@ -16,7 +18,8 @@ function Login() {
       <h1>Welcome to our E-commerce Website!</h1>
       <form>
       <label htmlFor='email'>email</label>
-      <input  type="email" placeholder="Enter your email"  />
+         
+      <input  type="email" placeholder="Enter your email"  required />
       <section>
         <label htmlFor='password'>password</label>
       <input type="password" placeholder="Enter your password" required />
@@ -28,7 +31,10 @@ function Login() {
   );
 }
 function App() {
+  const location = useLocation();
   return (
+   <>
+    {location.pathname !== "/" && <Navbar />}
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/products" element={<ProductCard />} />
@@ -38,6 +44,7 @@ function App() {
        <Route path='/LandingPage'element={<LandingPage/>}/>
        <Route path='/cart' element={<AddToCart/>}/>
     </Routes>
+    </>
   );
 }
 export default App;

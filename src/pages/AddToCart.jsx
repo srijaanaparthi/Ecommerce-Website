@@ -27,14 +27,14 @@ const navigate=useNavigate();
         style={{ objectFit: "contain" }}
       />
 
-      <h2>{Cartproductt.title}</h2>
+      <h2 style={{fontSize:'250%'}}>{Cartproductt.title}</h2>
 
-      <h3>${Cartproductt.price}</h3>
+      <h3 style={{fontSize:'250%'}}>${Cartproductt.price}</h3>
 
-    
+       <section style={{fontSize:'200%'}}>
       <QuantityDropdown Cartproductt={Cartproductt}/>
-     
-      <button onClick={()=>navigate("/CheckOut")}>Buy Now</button>
+       </section>
+      <button style={{fontSize:'250%',backgroundColor:'orange',marginInlineStart:600}} onClick={()=>navigate("/CheckOut")}>Buy Now</button>
 
     </div>
   );
@@ -49,7 +49,7 @@ function QuantityDropdown({Cartproductt}){
             <label htmlFor="quantity">
                 Quantity
             </label>
-            <select id="quantity" style={{width:50}}
+            <select id="quantity" style={{width:100,height:30}}
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}>
                 {option.map((num) => (

@@ -37,7 +37,7 @@ const navigate=useNavigate();
 
       <p style={{fontSize:'200%'}}>{product.description}</p>
       
-      <button  style={{fontSize:'250%',backgroundColor:'lightgreen'}}onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
+      <button  style={{fontSize:'250%',backgroundColor:'orange'}}onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
       </section>
     </div>
   );
