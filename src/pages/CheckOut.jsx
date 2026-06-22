@@ -1,15 +1,17 @@
 import {useState} from 'react';
 import './CheckOut.css'
+import Popup from  './Popup'
+import './Popup.css';
+
 function CheckOut(){
 
 const [name,setName]=useState();
 const [email,setEmail]=useState("");
 const [address, setAddress] = useState("");
+const [showPopup,setShowPopup] = useState("");
 const handleSubmit=(e) =>{
     e.preventDefault();
-    alert(
-        'ordered successfully'
-    );
+    setShowPopup(true);
     setEmail("");
     setName("");
     setAddress("");
@@ -52,6 +54,9 @@ return(
             <button  style={{textAlign:'center',backgroundColor:'orange',width:100,marginInlineStart:320,padding:5,marginTop:100}}
             onSubmit={handleSubmit}>Submit</button>
         </form>
+        {showPopup &&(
+            <Popup message ="your order is placed" onClose={()=>setShowPopup(false)}/>
+        )}
     </div>
     </>
 )
