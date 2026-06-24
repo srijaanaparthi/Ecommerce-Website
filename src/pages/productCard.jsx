@@ -31,22 +31,15 @@ function ProductCard(){
                  
                 </div>
             ))}
-        </div>
-        </>
-    )
-}
-function App()
-{
-    return(
-       
-        <Routes>
+             <Routes>
             <Route path="/product" element={<ProductCard/>}/>
             <Route path="/product/:id" element={<ViewDetails/>}/>
             <Route path="/productt/:id" element={<AddToCart/>}/>
         </Routes>
-           
-    
+        </div>
+        </>
     )
 }
+
 export default ProductCard;
 
