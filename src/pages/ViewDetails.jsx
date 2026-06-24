@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams,Route,Routes, Navigate, useNavigate } from "react-router-dom";
-import AddToCart from "./AddToCart";
-import CheckOut from "./CheckOut";
+import AddToCart from "./AddToCart.jsx";
+import CheckOut from "./CheckOut.jsx";
 function ViewDetails() {
   const { id } = useParams();
 const navigate=useNavigate();

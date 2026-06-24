@@ -1,13 +1,13 @@
 
 import './App.css';
 // import './banner-shopingg.jpg';
-import ProductCard from './pages/ProductCard';
-import ViewDetails from './pages/ViewDetails';
-import AddToCart from './pages/AddToCart';
+import ProductCard from './pages/ProductCard.jsx';
+import ViewDetails from './pages/ViewDetails.jsx';
+import AddToCart from './pages/AddToCart.jsx';
 import { Routes,Route,useNavigate,useLocation } from 'react-router-dom';
-import CheckOut from './pages/CheckOut';
-import LandingPage from './pages/LandingPage'
-import Navbar from './Components/Navbar';
+import CheckOut from './pages/CheckOut.jsx';
+import LandingPage from './pages/LandingPage.jsx'
+import Navbar from './Components/Navbar.jsx';
 function Login() {
   const navigate = useNavigate();
   

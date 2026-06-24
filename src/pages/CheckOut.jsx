@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./CheckOut.css";
-import Popup from "./Popup";
+import Popup from "./Popup.jsx";
 
 function CheckOut() {
   const [name, setName] = useState("");
@@ -67,7 +67,7 @@ function CheckOut() {
       {showPopup && (
         <Popup
           message="🎉 Your order has been placed successfully!"
-          onClose={() => setShowPopup(false)}
+          onClose={() => setShowPopup(true)}
         />
       )}
     </div>
