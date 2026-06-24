@@ -3,7 +3,7 @@ import { Route,Routes, useNavigate } from 'react-router-dom';
 import  './ProductCard.css'
 import ViewDetails from './ViewDetails.jsx'
 import AddToCart from './AddToCart.jsx';
-
+import '../assets/viewimage.png';
 function ProductCard(){
     const navigate = useNavigate();
     const [Products,setProducts]=useState([]);
@@ -13,9 +13,12 @@ function ProductCard(){
         .then(data=>setProducts(data))
     },[])   
     return(
-        <><section>
-            <h2 style={{textAlign:'center',fontFamily:'Courier New',fontSize:'500%'}}>Our Products</h2>
-            </section>
+        <div className='background'>
+            <h2>our products</h2>
+            <div className='overlay'>
+            
+            
+            
            
         <div className="product-card">
             
@@ -37,7 +40,8 @@ function ProductCard(){
             <Route path="/productt/:id" element={<AddToCart/>}/>
         </Routes>
         </div>
-        </>
+        </div>
+        </div>
     )
 }
 

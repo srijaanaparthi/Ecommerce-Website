@@ -1,27 +1,15 @@
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#222;
-    padding:15px 40px;
+.navigation{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+.l{
+     font-size: 44px;
+     align-items: end;
+     justify-items: right;
+     
 }
 
-.logo{
-    color:white;
-}
 
-.nav-links{
-    display:flex;
-    gap:25px;
-}
 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-size:18px;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:orange;
-}

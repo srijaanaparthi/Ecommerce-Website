@@ -1,14 +1,14 @@
 import {Link} from 'react-router-dom';
 function Layout(){
     return(
-        <nav className='Navbar' >
-        <div style={{textAlign:'right'}}>
-        <Link to='/products'>Home</Link>
+        <div className='navigation' >
+        <nav >
         
-        {/* <Link to='/addtocart'>Cart</Link> */}
-        <Link to='/LandingPage'>About</Link>
-        </div>
+        <Link to='/products'className='l'>Home</Link>
+        <Link to='/LandingPage' className='l'>About</Link>
+       
         </nav>
+         </div>
     )
 }
 export default Layout;

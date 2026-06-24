@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams,Route,Routes, useNavigate } from "react-router-dom";
 import AddToCart from "./AddToCart.jsx";
 import CheckOut from "./CheckOut.jsx";
+import '../assets/viewimage.png';
 function ViewDetails() {
   const { id } = useParams();
 const navigate = useNavigate();
@@ -18,33 +19,35 @@ const navigate = useNavigate();
   }
 
   return (
-    <div style={{ textAlign: "center", padding: "30px" ,color:'black',boxSizing:'content-box',marginLeft:20,backgroundColor:'ButtonShadow' }}>
+    <div className="card" >
+      <div className="content">
       <img
         src={product.image}
         alt={product.title}
-        width="250"
-        height="250"
-        style={{ objectFit: "contain" }}
+        width="300"
+        height="300"
+        
       />
-<section className="product-details">
-      <h2 style={{fontSize:'500%'}}>{product.title}</h2>
+<div className="product-details">
+      <h2 >{product.title}</h2>
 
-      <h3 style={{fontSize:'250%'}}>${product.price}</h3>
+      <h3 >${product.price}</h3>
 
-      <p style={{fontSize:'250%'}}>
+      <p >
         <strong>Category:</strong> {product.category}
       </p>
 
-      <p style={{fontSize:'200%'}}>{product.description}</p>
+      <p >{product.description}</p>
       
-      <button  style={{fontSize:'250%',backgroundColor:'orange'}}onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
-      </section>
+      <button  onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
+      </div>
       <div>
         <Routes>
         <Route path="/productt/:id" element={<AddToCart/>}/>
         <Route path="/CheckOut" element={<CheckOut/>}/>
         </Routes>
       </div>
+    </div>
     </div>
   );
 }

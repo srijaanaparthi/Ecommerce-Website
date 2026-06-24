@@ -1,4 +1,25 @@
-.product-details{
+.card{
+    display:flex;
+    background-color: black;
+    background-image: url("../assets/viewimage.png");
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin:50%;
+    align-items: center;
+}
+.content{
+    display: flex;
+    border-radius: 400%;
+    border-color: aqua;
+}
+button{
     text-align: center;
-    font-size: 100%;
+    justify-content: center;
+    width: 900%;
+}
+.product-details{
+   display:block;
+   justify-content: right;
+   align-items: right;
+   font-size: 8px;
 }

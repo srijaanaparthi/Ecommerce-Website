@@ -1,13 +1,12 @@
 
 import './App.css';
-// import './banner-shopingg.jpg';
-import ProductCard from './pages/ProductCard.jsx';
-import ViewDetails from './pages/ViewDetails.jsx';
-import AddToCart from './pages/AddToCart.jsx';
+import ProductCard from './pages/ProductCard';
+import ViewDetails from './pages/ViewDetails';
+import AddToCart from './pages/AddToCart';
 import { Routes,Route,useNavigate,useLocation } from 'react-router-dom';
-import CheckOut from './pages/CheckOut.jsx';
-import LandingPage from './pages/LandingPage.jsx'
-import Navbar from './Components/Navbar.jsx';
+import CheckOut from './pages/CheckOut';
+import LandingPage from './pages/LandingPage'
+import Navbar from './Components/Navbar';
 function Login() {
   const navigate = useNavigate();
   
@@ -16,17 +15,18 @@ function Login() {
   };
   return (
     <div className="App">
-      <div className='content'>
-      <h1 style={{textAlign:'center'}}>Welcome to our E-commerce Website!</h1>
-      <form>
+      <div className='container-card'>
+      <h1 >Welcome to our E-commerce Website!</h1>
+      <form className='inputs'>
       <label htmlFor='email'>email</label>
          
       <input  type="email" placeholder="Enter your email"  required />
+      <br></br>
       <section>
         <label htmlFor='password'>password</label>
       <input type="password" placeholder="Enter your password" required />
       </section>
-      <button style={{textAlign:'center',marginInlineStart:700}}
+      <button 
       onClick={handleLogin}>Login</button>
       </form>
        </div>

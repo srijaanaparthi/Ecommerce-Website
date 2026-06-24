@@ -1,4 +1,5 @@
 import './LandingPage.css'
+import '../assets/landingimage.png'
 import { Link } from "react-router-dom";
 function LandingPage(){
     return(
