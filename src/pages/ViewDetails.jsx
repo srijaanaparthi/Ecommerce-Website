@@ -40,7 +40,7 @@ const navigate = useNavigate();
       <button  style={{fontSize:'250%',backgroundColor:'orange'}}onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
       </section>
       <div>
-           <Routes>
+        <Routes>
         <Route path="/productt/:id" element={<AddToCart/>}/>
         <Route path="/CheckOut" element={<CheckOut/>}/>
         </Routes>
