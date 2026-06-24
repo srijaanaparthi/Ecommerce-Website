@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams,Route,Routes, Navigate, useNavigate } from "react-router-dom";
+import { useParams,Route,Routes, useNavigate } from "react-router-dom";
 import AddToCart from "./AddToCart.jsx";
 import CheckOut from "./CheckOut.jsx";
 function ViewDetails() {
   const { id } = useParams();
-const navigate=useNavigate();
+const navigate = useNavigate();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -39,17 +39,16 @@ const navigate=useNavigate();
       
       <button  style={{fontSize:'250%',backgroundColor:'orange'}}onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
       </section>
-    </div>
-  );
-}
-function App(){
-    return(
-        <Routes>
+      <div>
+           <Routes>
         <Route path="/productt/:id" element={<AddToCart/>}/>
         <Route path="/CheckOut" element={<CheckOut/>}/>
         </Routes>
-   )
+      </div>
+    </div>
+  );
 }
+
 
 
 
