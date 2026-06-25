@@ -1,3 +1,4 @@
+import './Popup.css';
 function Popup({message,oClose}){
 return(
     <div className="Popup-overlay">
@@ -6,7 +7,7 @@ return(
             success
         </h2>
         <p>{message}</p>
-        <button onClick={onclose}>ok</button>
+        <button  className='b' onClick={oClose}>ok</button>
         </div>
 </div>
 )

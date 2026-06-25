@@ -27,7 +27,7 @@ function CheckOut() {
 
           <div className="input-group">
             <label>Name</label>
-            <input
+            <input className="i"
               type="text"
               placeholder="Enter your name"
               value={name}
@@ -38,7 +38,7 @@ function CheckOut() {
 
           <div className="input-group">
             <label>Email</label>
-            <input
+            <input className="i"
               type="email"
               placeholder="Enter your email"
               value={email}
@@ -67,7 +67,7 @@ function CheckOut() {
       {showPopup && (
         <Popup
           message="🎉 Your order has been placed successfully!"
-          onClose={() => setShowPopup(true)}
+          oClose={() => setShowPopup(false)}
         />
       )}
     </div>

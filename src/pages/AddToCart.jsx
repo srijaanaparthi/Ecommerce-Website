@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-
+import './AddToCart.css';
 function AddToCart() {
   const { id } = useParams();
 const navigate=useNavigate();
@@ -18,24 +18,24 @@ const navigate=useNavigate();
   }
   return(
     
-        <div style={{display: '-ms-flexbox', textAlign: "left", padding: "30px" ,color:'black',backgroundColor:'InfoBackground',marginBottom:30,}}>
+        <div className="cart">
       <img
         src={Cartproductt.image}
         alt={Cartproductt.title}
-        width="250"
-        height="250"
-        style={{ objectFit: "contain"}}
+        width="350"
+        height="350"
+        
       />
+     <div className="content">
+      <h2 >{Cartproductt.title}</h2>
 
-      <h2 style={{fontSize:'250%'}}>{Cartproductt.title}</h2>
+      <h3 >${Cartproductt.price}</h3>
 
-      <h3 style={{fontSize:'250%'}}>${Cartproductt.price}</h3>
-
-       <section style={{fontSize:'200%'}}>
+       <section >
       <QuantityDropdown Cartproductt={Cartproductt}/>
        </section>
-      <button style={{fontSize:'250%',backgroundColor:'orange',marginInlineStart:600}} onClick={()=>navigate("/CheckOut")}>Buy Now</button>
-
+      <button className="btnn" onClick={()=>navigate("/CheckOut")}>Buy Now</button>
+</div>
     </div>
   );
 }
@@ -49,7 +49,7 @@ function QuantityDropdown({Cartproductt}){
             <label htmlFor="quantity">
                 Quantity
             </label>
-            <select id="quantity" style={{width:100,height:30}}
+            <select id="quantity" 
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}>
                 {option.map((num) => (

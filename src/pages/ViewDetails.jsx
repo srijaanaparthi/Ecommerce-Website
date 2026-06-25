@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams,Route,Routes, useNavigate } from "react-router-dom";
 import AddToCart from "./AddToCart.jsx";
 import CheckOut from "./CheckOut.jsx";
+import './ViewDetails.css'
 import '../assets/viewimage.png';
 function ViewDetails() {
   const { id } = useParams();
@@ -19,16 +20,16 @@ const navigate = useNavigate();
   }
 
   return (
-    <div className="card" >
-      <div className="content">
+    <div id="card" >
+      <div id="content">
       <img
         src={product.image}
         alt={product.title}
-        width="300"
-        height="300"
+        width="350"
+        height="350"
         
       />
-<div className="product-details">
+<div id="product-details">
       <h2 >{product.title}</h2>
 
       <h3 >${product.price}</h3>
@@ -39,7 +40,7 @@ const navigate = useNavigate();
 
       <p >{product.description}</p>
       
-      <button  onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
+      <button  className="bnt" onClick={()=>navigate(`/productt/${product.id}`)}>Add to Cart</button>
       </div>
       <div>
         <Routes>

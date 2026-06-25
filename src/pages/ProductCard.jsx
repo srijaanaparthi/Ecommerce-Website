@@ -13,13 +13,11 @@ function ProductCard(){
         .then(data=>setProducts(data))
     },[])   
     return(
+        <>
         <div className='background'>
             <h2>our products</h2>
             <div className='overlay'>
             
-            
-            
-           
         <div className="product-card">
             
             {Products.map(product=>(
@@ -29,19 +27,21 @@ function ProductCard(){
                     <h2 className='name'>{product.name}</h2>
                     <p>${product.price}</p>
                     <p>{product.category}</p>
-                    <button className='btn' onClick={() => navigate(`/productt/${product.id}`)}>Add to Cart</button>
-                    <button className='btn'  onClick={() => navigate(`/product/${product.id}`)}>View Details</button>
+                    <button className='bttn' style={{alignItems:'center' ,justifyContent:'center'}} onClick={() => navigate(`/productt/${product.id}`)}>Add to Cart</button>
+                    <button className='bttn'  onClick={() => navigate(`/product/${product.id}`)}>View Details</button>
                  
                 </div>
             ))}
-             <Routes>
+            
+        </div>
+        </div>
+        </div>
+ <Routes>
             <Route path="/product" element={<ProductCard/>}/>
             <Route path="/product/:id" element={<ViewDetails/>}/>
             <Route path="/productt/:id" element={<AddToCart/>}/>
         </Routes>
-        </div>
-        </div>
-        </div>
+        </>
     )
 }
 

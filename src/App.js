@@ -26,7 +26,7 @@ function Login() {
         <label htmlFor='password'>password</label>
       <input type="password" placeholder="Enter your password" required />
       </section>
-      <button 
+      <button className='click'
       onClick={handleLogin}>Login</button>
       </form>
        </div>
