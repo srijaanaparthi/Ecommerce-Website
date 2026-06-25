@@ -1,8 +1,8 @@
 .cart{
 /* 
     background-image: url("../assets/viewimage.png"); */
-    margin: 4%;
-    margin-top: 5%;
+    margin: 2%;
+    
     padding: 2%;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
     padding: 3%;
     width: 100%;
     margin: 20px;
-    font-size: 20px;
+    font-size: 28px;
 } 
  .btnn{
     justify-content: center;

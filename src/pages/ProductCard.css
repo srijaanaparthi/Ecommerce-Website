@@ -10,7 +10,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    margin-top: 10%;
+    margin-top: 0%;
     padding: 30px;
 }
 .product-card h2{
@@ -94,9 +94,11 @@ overlay{
     align-items: center;
     text-align: center;
     font-size: 54px;
-    margin-top: 5%;
-    margin-bottom: 1%;
+    padding: 2%;
+    margin-top: 4%;
+    gap: 3;
+    margin-bottom: 0%;
     color: white;
-    background-color: #f4f4f453;
+    background-color: #0b0a0a7e;
     
 }
