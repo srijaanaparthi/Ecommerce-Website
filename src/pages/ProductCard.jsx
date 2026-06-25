@@ -15,7 +15,7 @@ function ProductCard(){
     return(
         <>
         <div className='background'>
-            <h2>our products</h2>
+            <h2 className='h'>our products</h2>
             <div className='overlay'>
             
         <div className="product-card">

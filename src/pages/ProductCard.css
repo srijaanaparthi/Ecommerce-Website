@@ -89,12 +89,14 @@ overlay{
     background-color: #eaa5c1;
 
 }
-h2{
+.h{
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 54px;
+    margin-top: 5%;
     margin-bottom: 1%;
     color: white;
+    background-color: #f4f4f453;
     
 }

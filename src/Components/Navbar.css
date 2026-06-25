@@ -18,10 +18,81 @@
 
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 
-  
+    z-index: 1000;
 }
+
+
+
+.logo h2{
+    color: rgb(26, 24, 24);
+    font-size: 34px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+
+
 .l{
-    font-size: 24px;
+    text-decoration: none;
+    color: rgb(26, 24, 24);
+    font-size: 20px;
+    font-weight: 600;
+
+    transition: .3s;
+    position: relative;
 }
 
 
+
+.l::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+    height:3px;
+
+    background:#ffb347;
+    transition:.3s;
+}
+
+.l:hover::after{
+    width:100%;
+}
+
+.l:hover{
+    color:#ffb347;
+}
+
+
+
+.login-btn{
+    text-decoration:none;
+
+    background:#ff9d00;
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:30px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#ff7b00;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,157,0,.4);
+}

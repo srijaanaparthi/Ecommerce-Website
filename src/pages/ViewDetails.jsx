@@ -30,7 +30,7 @@ const navigate = useNavigate();
         
       />
 <div id="product-details">
-      <h2 >{product.title}</h2>
+      <h2 className="head" >{product.title}</h2>
 
       <h3 >${product.price}</h3>
 

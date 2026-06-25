@@ -19,11 +19,12 @@ const navigate=useNavigate();
   return(
     
         <div className="cart">
-      <img
+      <img className="pic"
         src={Cartproductt.image}
         alt={Cartproductt.title}
         width="350"
         height="350"
+       
         
       />
      <div className="content">
